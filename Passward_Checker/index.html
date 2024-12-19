@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passward Checker</title>
+    <link rel="stylesheet" href="npm i bootstrap-icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="passward" id="passward" placeholder="passward to check..."/>
+    <div class="check-results">
+        <span id="upperCase" class="invalid">
+            <i class="bi bi shild-x"></i>Contain Upper Letter</span>
+
+        <span id="lowerCase" class="invalid">
+            <i class="bi bi shild-x"></i>Contain Lower Letter</span>
+
+        <span id="number" class="invalid">
+            <i class="bi bi shild-x"></i>Contain Number</span>
+
+        <span id="specialChar" class="invalid">
+            <i class="bi bi shild-x"></i>Contain Symbol</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
