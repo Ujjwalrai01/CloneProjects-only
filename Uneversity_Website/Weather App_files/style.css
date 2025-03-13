@@ -1,0 +1,93 @@
+/* CSS File: styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff6b6b);
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.app-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.input {
+    padding: 10px;
+    border: 2px solid #ff6b6b;
+    border-radius: 5px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6b6b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e65353;
+}
+
+.weather-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #ff7eb3;
+    color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.weather-card.hidden {
+    display: none;
+}
+
+.weather-card h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.weather-card p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input {
+        margin-right: 0;
+    }
+}
