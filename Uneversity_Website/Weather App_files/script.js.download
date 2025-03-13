@@ -1,0 +1,40 @@
+/* JavaScript File: script.js */
+const form = document.getElementById('locationForm');
+const locationInput = document.getElementById('locationInput');
+const weatherCard = document.getElementById('weatherCard');
+const locationName = document.getElementById('locationName');
+const temperature = document.getElementById('temperature');
+const condition = document.getElementById('condition');
+const humidity = document.getElementById('humidity');
+const wind = document.getElementById('wind');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const location = locationInput.value;
+    const apiKey = '38a19b3b403447598ba53326252801';
+    const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=yes`;
+
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+            throw new Error('Failed to fetch weather data');
+        }
+
+        const data = await response.json();
+        displayWeather(data);
+    } catch (error) {
+        weatherCard.classList.add('hidden');
+        alert(`Error: ${error.message}`);
+    }
+});
+
+function displayWeather(data) {
+    const { location, current } = data;
+    locationName.textContent = `${location.name}, ${location.country}`;
+    temperature.textContent = `Temperature: ${current.temp_c}°C`;
+    condition.textContent = `Condition: ${current.condition.text}`;
+    humidity.textContent = `Humidity: ${current.humidity}%`;
+    wind.textContent = `Wind Speed: ${current.wind_kph} km/h`;
+
+    weatherCard.classList.remove('hidden');
+}
