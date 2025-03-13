@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Jarvis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0 0 20px;
+            font-size: 2.5rem;
+        }
+
+        #start {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background: #4caf50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #start:hover {
+            background: #45a049;
+        }
+
+        #output {
+            font-size: 1.2rem;
+            margin: 20px auto;
+            padding: 10px;
+            max-width: 90%;
+            border: 2px dashed #ffffff;
+            border-radius: 5px;
+            word-wrap: break-word;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            #start {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+
+            #output {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Jarvis - Your Voice Assistant</h1>
+    <button id="start">Start Listening</button>
+    <div id="output">Say something...</div>
+    <script src="jarvis.js"></script>
+</body>
+</html>
+
